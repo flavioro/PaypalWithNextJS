@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ButtonPaypal from "../components/ButtonPaypal"
 
 export default function Home() {
   const [isCheckout, setIsCheckout] = useState(false);
+
+  useEffect(() => {
+    console.log('isCheckout ', isCheckout)
+  }, [])  
+  
   const order = {
     customer: '1212213123',
     total: '30.00',
