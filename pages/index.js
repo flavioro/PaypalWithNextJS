@@ -29,8 +29,9 @@ export default function Home() {
   }
 
   if (isCheckout) {
-    return (
+    return (<>
       <ButtonPaypal total={order.total} items={order.items} />
+      {console.log(order.items)}</>
     )
   }
 
